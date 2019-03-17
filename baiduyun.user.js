@@ -1824,7 +1824,7 @@
         $('div.dialog-header h3 span.dialog-title', dialog).text(params.title + "：" + params.list.filename);
         $.each(params.list.urls, function (index, element) {
           if (params.type == 'GMlink') {
-            var $div = $('<div><div style="width:30px;float:left">' + element.rank + ':</div><div style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis"><a class="GMlink" href="javascript:;">' + element.url + '</a></div></div>');
+            var $div = $('<div><div style="width:30px;float:left">' + element.rank + ':</div><div style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis"><a class="GMlink" href="' + element.url + '">' + element.url + '</a></div></div>');
           } else{
             var $div = $('<div><div style="width:30px;float:left">' + element.rank + ':</div><div style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis"><a href="' + element.url + '">' + element.url + '</a></div></div>');
           }
@@ -1846,7 +1846,7 @@
               if (element.downloadlink == item.url)
                 return;
               if (params.type == 'GMbatch') {
-                var $item = $('<div class="item-ex" style="display:none;overflow:hidden;text-overflow:ellipsis"><a class="GMlink" href="javascript:;">' + item.url + '</a></div>');
+                var $item = $('<div class="item-ex" style="display:none;overflow:hidden;text-overflow:ellipsis"><a class="GMlink" href="' + element.url + '">' + item.url + '</a></div>');
               } else{
                 var $item = $('<div class="item-ex" style="display:none;overflow:hidden;text-overflow:ellipsis"><a href="' + item.url + '">' + item.url + '</a></div>');
               }
